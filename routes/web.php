@@ -12,9 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
-Route::get('/', 'HomeController@index');
-Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/', 'DashboardController@index');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::prefix('MasterRole')->namespace('masterRole')->name('MasterRole.')->group(function(){
     //role
@@ -37,5 +40,6 @@ Route::prefix('MasterRole')->namespace('masterRole')->name('MasterRole.')->group
     Route::get('{id}/editPassword', 'PenggunaController@editPassword')->name('editPassword');
     Route::post('{id}/updatePassword', 'PenggunaController@updatePassword')->name('updatePassword');
 });
+
 
 

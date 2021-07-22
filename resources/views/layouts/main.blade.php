@@ -142,6 +142,8 @@
     <script type="text/javascript">
         $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
     </script>
+     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="/js/highcharts.js"></script>
     @yield('script')
 
 

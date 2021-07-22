@@ -166,64 +166,20 @@
                             <img src="{{asset('assets/img/dummy/u8.png')}}" class="user-image" alt="User Image">
                             <i class="icon-more_vert "></i>
                         </a>
-                        <div class="dropdown-menu p-4 dropdown-menu-right">
-                            <div class="row box justify-content-between my-4">
+                        <div class="dropdown-menu p-4 dropdown-menu-right" style="width:255px">
+                            <div class="box justify-content-between">
                                 <div class="col">
                                     <a href="#">
-                                        <i class="icon-apps purple lighten-2 avatar  r-5"></i>
-                                        <div class="pt-1">Apps</div>
+                                        <i class="icon-user amber-text lighten-2 avatar r-5"></i>
+                                    <div class="pt-1"></div>
                                     </a>
                                 </div>
-                                <div class="col"><a href="#">
-                                    <i class="icon-beach_access pink lighten-1 avatar  r-5"></i>
-                                    <div class="pt-1">Profile</div>
-                                </a></div>
                                 <div class="col">
-                                    <a href="#">
-                                        <i class="icon-perm_data_setting indigo lighten-2 avatar  r-5"></i>
-                                        <div class="pt-1">Settings</div>
-                                    </a>
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="list-group-item list-group-item-action mt-2"><i class="mr-2 icon-power-off text-danger"></i>Logout</a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
                                 </div>
                             </div>
-                            <div class="row box justify-content-between my-4">
-                                <div class="col">
-                                    <a href="#">
-                                        <i class="icon-star light-green lighten-1 avatar  r-5"></i>
-                                        <div class="pt-1">Favourites</div>
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="#">
-                                        <i class="icon-save2 orange accent-1 avatar  r-5"></i>
-                                        <div class="pt-1">Saved</div>
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="#">
-                                        <i class="icon-perm_data_setting grey darken-3 avatar  r-5"></i>
-                                        <div class="pt-1">Settings</div>
-                                    </a>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row box justify-content-between my-4">
-                                <div class="col">
-                                    <a href="#">
-                                        <i class="icon-apps purple lighten-2 avatar  r-5"></i>
-                                        <div class="pt-1">Apps</div>
-                                    </a>
-                                </div>
-                                <div class="col"><a href="#">
-                                    <i class="icon-beach_access pink lighten-1 avatar  r-5"></i>
-                                    <div class="pt-1">Profile</div>
-                                </a></div>
-                                <div class="col">
-                                    <a href="#">
-                                        <i class="icon-perm_data_setting indigo lighten-2 avatar  r-5"></i>
-                                        <div class="pt-1">Settings</div>
-                                    </a>
-                                </div>
-                            </div>
+                       
                         </div>
                     </li>
                 </ul>
